@@ -35,7 +35,11 @@ def _has_type(payload_changes: dict[str, Any]) -> bool:
 
 
 def _is_text_message(payload_changes: dict[str, Any]) -> bool:
-    if payload_changes["value"]["messages"][0]["type"] == "text":
+    if (
+        "referral" not in payload_changes["value"]["messages"][0]
+        and "context" not in payload_changes["value"]["messages"][0]
+        and payload_changes["value"]["messages"][0]["type"] == "text"
+    ):
         return True
     return False
 
