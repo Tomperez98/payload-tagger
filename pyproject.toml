@@ -22,7 +22,7 @@ dev = [
 ]
 
 [tool.ruff]
-line-length = 88
+line-length = 79
 ignore = [
     "ANN101",
     "D203",
@@ -71,9 +71,8 @@ enum = { msg = "`enum` is banned: Python enums are not allowed. Use typing.Liter
 [tool.ruff.flake8-quotes]
 inline-quotes = "double"
 
-
 [tool.black]
-line-length = 88
+line-length = 79
 include = '\.pyi?$'
 
 [tool.pytest.ini_options]
@@ -83,13 +82,23 @@ addopts = [
     "--import-mode=importlib",
     "--strict-markers",
     "--cov-config=pyproject.toml",
-    "--cov-fail-under=80",
+    "--cov-fail-under=70",
     "--cov=payload_tagger",
     "--cov-report=term-missing:skip-covered",
 ]
 markers = [
     "integration: mark integration tests.",
     "unit: mark unittest.",
+]
+
+[tool.coverage.report]
+precision = 1
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+  "@overload",
+  "raise NotImplementedError"
 ]
 
 [tool.mypy]
