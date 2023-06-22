@@ -12,7 +12,7 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
-    
+    "result"
 ]
 
 [project.optional-dependencies]
@@ -60,9 +60,13 @@ exclude = [
 known-first-party = ["payload_tagger"]
 force-wrap-aliases = true
 combine-as-imports = true
+required-imports = ["from __future__ import annotations"]
 
 [tool.ruff.flake8-tidy-imports]
 ban-relative-imports = "all"
+
+[tool.ruff.flake8-tidy-imports.banned-api]
+enum = { msg = "`enum` is banned: Python enums are not allowed. Use typing.Literal and typing.TypeAlias to build enums" }
 
 [tool.ruff.flake8-quotes]
 inline-quotes = "double"
@@ -78,6 +82,10 @@ xfail_strict = true
 addopts = [
     "--import-mode=importlib",
     "--strict-markers",
+    "--cov-config=pyproject.toml",
+    "--cov-fail-under=80",
+    "--cov=payload_tagger",
+    "--cov-report=term-missing:skip-covered",
 ]
 markers = [
     "integration: mark integration tests.",
