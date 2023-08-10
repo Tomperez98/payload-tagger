@@ -1,4 +1,3 @@
-"""Test whatsapp."""
 from __future__ import annotations
 
 from typing import Any
@@ -418,7 +417,6 @@ def test_identify_payload(
     payload: dict[str, Any],
     expected: whatsapp.SupportedWebhooks,
 ) -> None:
-    """Test identify payload works."""
     assert whatsapp.identify_payload(payload=payload).unwrap() == expected
 
 
@@ -960,7 +958,6 @@ def test_identify_payload(
 def test_not_identify_payload(
     payload: dict[str, Any],
 ) -> None:
-    """Test failure to identify payload."""
     assert isinstance(
         whatsapp.identify_payload(payload=payload).err(),
         errors.NotIdentifiedPayloadError,
