@@ -93,7 +93,7 @@ from payload_tagger import clickup, errors
                             "profilePicture": None,
                         },
                         "before": None,
-                        "after": '{"ops":[{"insert":"This is a task description update to trigger the "},{"insert":"\\n","attributes":{"block-id":"block-24d0457c-908f-412c-8267-da08f8dc93e4"}}]}',
+                        "after": '{"ops":[{"insert":"This is a task description update to trigger the "},{"insert":"\\n","attributes":{"block-id":"block-24d0457c-908f-412c-8267-da08f8dc93e4"}}]}',  # noqa: E501
                     },
                 ],
                 "task_id": "1vj37mc",
@@ -133,7 +133,7 @@ from payload_tagger import clickup, errors
                                 "new_drop_down": True,
                                 "options": [
                                     {
-                                        "id": "5048f827-f16a-47b0-afec-5fd0e51b5f50",
+                                        "id": "5048f827-f16a-47b0-afec-5fd0e51b5f50",  # noqa: E501
                                         "name": "Monthly",
                                         "value": "Monthly",
                                         "type": "text",
@@ -141,7 +141,7 @@ from payload_tagger import clickup, errors
                                         "orderindex": 0,
                                     },
                                     {
-                                        "id": "5c69d237-f440-4498-ae46-3b3948db931b",
+                                        "id": "5c69d237-f440-4498-ae46-3b3948db931b",  # noqa: E501
                                         "name": "Quarterly",
                                         "value": "Quarterly",
                                         "type": "text",
@@ -149,7 +149,7 @@ from payload_tagger import clickup, errors
                                         "orderindex": 1,
                                     },
                                     {
-                                        "id": "fc4b63d1-d4d5-45fc-bee5-3adef2b15dff",
+                                        "id": "fc4b63d1-d4d5-45fc-bee5-3adef2b15dff",  # noqa: E501
                                         "name": "Yearly",
                                         "value": "Yearly",
                                         "type": "text",
@@ -157,9 +157,9 @@ from payload_tagger import clickup, errors
                                         "orderindex": 2,
                                     },
                                     {
-                                        "id": "8c7a4048-53fd-455a-82ba-ecf2a8a4c74d",
-                                        "name": "here's a really long long long drop down option with a long line of text",
-                                        "value": "here's a really long long long drop down option with a long line of text",
+                                        "id": "8c7a4048-53fd-455a-82ba-ecf2a8a4c74d",  # noqa: E501
+                                        "name": "here's a really long long long drop down option with a long line of text",  # noqa: E501
+                                        "value": "here's a really long long long drop down option with a long line of text",  # noqa: E501
                                         "type": "text",
                                         "color": None,
                                         "orderindex": 3,
@@ -461,7 +461,7 @@ from payload_tagger import clickup, errors
                                 {
                                     "text": "\n",
                                     "attributes": {
-                                        "block-id": "block-4c8fe54f-7bff-4b7b-92a2-9142068983ea",
+                                        "block-id": "block-4c8fe54f-7bff-4b7b-92a2-9142068983ea",  # noqa: E501
                                     },
                                 },
                             ],
@@ -549,7 +549,7 @@ from payload_tagger import clickup, errors
                                 {
                                     "text": "\n",
                                     "attributes": {
-                                        "block-id": "block-4c8fe54f-7bff-4b7b-92a2-9142068983ea",
+                                        "block-id": "block-4c8fe54f-7bff-4b7b-92a2-9142068983ea",  # noqa: E501
                                     },
                                 },
                             ],

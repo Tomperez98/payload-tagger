@@ -47,7 +47,7 @@ SupportedPayloads: TypeAlias = Literal[
 ]
 
 
-def identify_payload(  # noqa: C901, PLR0912
+def identify_payload(  # noqa: C901, PLR0912, PLR0915
     payload: dict[str, Any],
 ) -> Result[SupportedPayloads, NotIdentifiedPayloadError]:
     """Identify ClickUp payload."""
